@@ -21,7 +21,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "salahtimes-production.up.railway.app",
+        "http://salahtimes-production.up.railway.app/api/register",
         {
           username,
           email,
