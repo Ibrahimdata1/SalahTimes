@@ -14,7 +14,7 @@ const Login = ({ setIsAuthenticated }) => {
 
     try {
       const response = await axios.post(
-        "http://salahtimes-production.up.railway.app/api/login",
+        "https://salahtimes-production.up.railway.app/api/login",
         {
           email: email,
           password: password,

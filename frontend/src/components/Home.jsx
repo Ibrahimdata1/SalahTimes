@@ -35,7 +35,7 @@ const Home = ({ isAuthenticated, setIsAuthenticated }) => {
         setApiCities(respondCity.data.data);
         setPrayerTimes(respondTime.data.data.timings);
         const respond = await axios.get(
-          `http://salahtimes-production.up.railway.app/api/`
+          `https://salahtimes-production.up.railway.app/api/`
         );
         setCards(respond.data.data);
       } catch (error) {
