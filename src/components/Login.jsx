@@ -24,7 +24,7 @@ const Login = ({ setIsAuthenticated }) => {
       }
     } catch (error) {
       setErrorMessage(error.response.data.message);
-      console.log(error);
+      console.log(error.response.data);
     }
   };
 
