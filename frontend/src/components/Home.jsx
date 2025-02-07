@@ -53,11 +53,19 @@ const Home = ({ isAuthenticated, setIsAuthenticated }) => {
   }));
 
   if (!prayerTimes) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="w-16 h-16 border-4 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
+          <p className="text-lg text-gray-600">Loading Prayer Times...</p>
+        </div>
+      </div>
+    );
   }
+
   const handleCountryChange = (e) => {
     setCountry(e.target.value);
-    setCity(""); // รีเซ็ตค่า city เมื่อเปลี่ยนประเทศ
+    setCity("");
   };
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
