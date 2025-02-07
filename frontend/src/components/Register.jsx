@@ -20,11 +20,14 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/register", {
-        username,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "salahtimes-production.up.railway.app",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       console.log(response.data.message);
       if (response.data.message) {
         setErrorMessage("");

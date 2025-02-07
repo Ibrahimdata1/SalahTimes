@@ -13,10 +13,13 @@ const Login = ({ setIsAuthenticated }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "salahtimes-production.up.railway.app",
+        {
+          email: email,
+          password: password,
+        }
+      );
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
         setIsAuthenticated(true);
