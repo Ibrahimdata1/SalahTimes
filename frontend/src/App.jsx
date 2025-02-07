@@ -3,7 +3,6 @@ import {
   Routes,
   Route,
   Navigate,
-  useNavigate,
 } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
