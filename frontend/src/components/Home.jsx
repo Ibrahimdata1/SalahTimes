@@ -33,6 +33,7 @@ const Home = ({ isAuthenticated, setIsAuthenticated }) => {
         );
         setApiCountries(respondCountry.data);
         setApiCities(respondCity.data.data);
+        console.log(respondTime.data.data);
         setPrayerTimes(respondTime.data.data.timings);
         const respond = await axios.get(
           `https://salahtimes-production.up.railway.app/api/`
